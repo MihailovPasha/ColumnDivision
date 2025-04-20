@@ -10,10 +10,10 @@ public class Main {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Введите формат задания (russian или german): ");
             String formatColumn = scanner.nextLine().trim().toUpperCase();
-            Interpretation format;
+            DivisionFormatType format;
 
             try {
-                format = Interpretation.valueOf(formatColumn);
+                format = DivisionFormatType.valueOf(formatColumn);
             } catch (IllegalArgumentException e) {
                 System.out.println("Некорректный формат. Используйте 'russian' или 'german'.");
                 return;
@@ -25,7 +25,7 @@ public class Main {
             System.out.println("Введите делитель:");
             long divisor = scanner.nextLong();
 
-            System.out.println(ColumnDivisionFormat.defineTheFormat(format, dividend, divisor));
+            System.out.println(ColumnDivisionFormatter.defineTheFormat(format, dividend, divisor));
 
         } catch (InputMismatchException e) {
             System.out.println("Неправильный формат ввода. Пожалуйста, введите целые числа для делимого и делителя.");

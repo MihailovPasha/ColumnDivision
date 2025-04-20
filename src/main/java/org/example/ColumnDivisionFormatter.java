@@ -1,9 +1,9 @@
 package org.example;
 
 
-public class ColumnDivisionFormat {
+public class ColumnDivisionFormatter {
 
-    protected static String defineTheFormat(Interpretation format, long dividend, long divisor) {
+    protected static String defineTheFormat(DivisionFormatType format, long dividend, long divisor) {
         if (divisor == 0) {
             throw new IllegalArgumentException("Делитель не может быть равен нулю");
         }
@@ -11,14 +11,14 @@ public class ColumnDivisionFormat {
             throw new IllegalArgumentException("Не указан формат деления.");
         }
 
-        ColumnDivision interpreter;
+        ColumnDivisionService interpreter;
 
         switch (format) {
             case RUSSIAN -> {
-                interpreter = new RussianInterpretation();
+                interpreter = new RussianInterpretationService();
             }
             case GERMAN -> {
-                interpreter = new GermanInterpretation();
+                interpreter = new GermanInterpretationService();
             }
             default -> throw new IllegalArgumentException("Неизвестный формат:" + format);
         }

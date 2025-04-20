@@ -1,6 +1,6 @@
 package org.example;
 
-public class GermanInterpretation extends ColumnDivision {
+public class GermanInterpretationService extends ColumnDivisionService {
     protected String formatOutputBefore(long dividend, long divisor, String quotient) {
         String sign = "";
         if (quotient.startsWith("-")) {
@@ -10,7 +10,7 @@ public class GermanInterpretation extends ColumnDivision {
     }
 
     protected void countTheResultOfColumn(long dividend, long divisor) {
-        ColumnDivisionSourceCode.countTheResultOfColumn(dividend, divisor);
+        ColumnDivisionCalculator.countTheResultOfColumn(dividend, divisor);
     }
 
     protected String formatOutputAfter(long dividend, long divisor) {

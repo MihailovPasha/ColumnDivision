@@ -1,9 +1,9 @@
 package org.example;
 
-abstract class ColumnDivision {
-    protected static StringBuilder result = new StringBuilder();
-    protected static StringBuilder remainder = new StringBuilder();
-    protected static StringBuilder quotient = new StringBuilder();
+public abstract class ColumnDivisionService {
+    public static StringBuilder result = new StringBuilder();
+    public static StringBuilder remainder = new StringBuilder();
+    public static StringBuilder quotient = new StringBuilder();
 
     public String calculateAndFormat(long dividend, long divisor) {
         countTheResultOfColumn(dividend, divisor);
