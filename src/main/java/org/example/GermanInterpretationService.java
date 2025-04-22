@@ -1,7 +1,7 @@
 package org.example;
 
 public class GermanInterpretationService extends ColumnDivisionService {
-    protected String formatOutputBefore(long dividend, long divisor, String quotient) {
+    public String formatOutputBefore(long dividend, long divisor, String quotient) {
         String sign = "";
         if (quotient.startsWith("-")) {
             sign = "-";

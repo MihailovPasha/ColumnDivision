@@ -1,9 +1,16 @@
 import org.example.*;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class ColumnDivisionCalculatorTest {
+    @Before
+    public void setParameters() {
+        ColumnDivisionService.quotient.setLength(0);
+        ColumnDivisionService.result.setLength(0);
+    }
+
     @Test
     public void testPositiveNumbers() {
         ColumnDivisionCalculator.countTheResultOfColumn(78945, 4);
