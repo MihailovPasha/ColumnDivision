@@ -2,7 +2,7 @@ import org.example.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class ColumnDivisionCalculatorTest {
     @Before
@@ -20,35 +20,35 @@ public class ColumnDivisionCalculatorTest {
 
     @Test
     public void testNegativeDividend() {
-        ColumnDivisionCalculator.countTheResultOfColumn(-12345, 5);
-        String expectedQuotient = "-2469";
+        ColumnDivisionCalculator.countTheResultOfColumn(-900034561, 7);
+        String expectedQuotient = "-128576365";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testNegativeDivisor() {
-        ColumnDivisionCalculator.countTheResultOfColumn(12345, -5);
-        String expectedQuotient = "-2469";
+        ColumnDivisionCalculator.countTheResultOfColumn(12345675, -3);
+        String expectedQuotient = "-204115225";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testBothNegative() {
-        ColumnDivisionCalculator.countTheResultOfColumn(-12345, -5);
-        String expectedQuotient = "2469";
+        ColumnDivisionCalculator.countTheResultOfColumn(-788895441, -9);
+        String expectedQuotient = "8765549";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testDivisionWithZero() {
-        ColumnDivisionCalculator.countTheResultOfColumn(0, 12345);
+        ColumnDivisionCalculator.countTheResultOfColumn(0, 12342345);
         String expectedQuotient = "0";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testDivisionOfTheNumberOfItself() {
-        ColumnDivisionCalculator.countTheResultOfColumn(12345, 12345);
+        ColumnDivisionCalculator.countTheResultOfColumn(289573463, 289573463);
         String expectedQuotient = "1";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }

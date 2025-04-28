@@ -1,6 +1,6 @@
 package org.example;
 
-enum DivisionFormatType {
+public enum DivisionFormatType {
     RUSSIAN,
     GERMAN
 }

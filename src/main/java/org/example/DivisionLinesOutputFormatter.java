@@ -1,9 +1,9 @@
 package org.example;
 
-import static org.example.ColumnDivisionService.*;
+import static org.example.ColumnDivisionService.result;
 
 public class DivisionLinesOutputFormatter {
-    protected static void appendDivisionLines(int index, long currentNumber, long subtractedNumber, boolean isNegative) {
+    public static void appendDivisionLines(int index, long currentNumber, long subtractedNumber, boolean isNegative) {
         String lastRemainder = String.format("%" + (index + 2) + "s", "_" + currentNumber);
         result.append(lastRemainder).append("\n");
 
@@ -14,7 +14,7 @@ public class DivisionLinesOutputFormatter {
         result.append(line);
     }
 
-    protected static void setQuotient(String quotient) {
+    public static void setQuotient(String quotient) {
         ColumnDivisionService.quotient.replace(0, ColumnDivisionService.quotient.length(), quotient);
     }
 }

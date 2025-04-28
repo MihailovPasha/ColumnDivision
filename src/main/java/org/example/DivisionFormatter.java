@@ -1,9 +1,10 @@
 package org.example;
 
 
-public class ColumnDivisionFormatter {
+public class DivisionFormatter implements DivisionService {
 
-    protected static String defineTheFormat(DivisionFormatType format, long dividend, long divisor) {
+    @Override
+    public String divideAndFormat(DivisionFormatType format, long dividend, long divisor) {
         if (divisor == 0) {
             throw new IllegalArgumentException("Делитель не может быть равен нулю");
         }
@@ -22,6 +23,6 @@ public class ColumnDivisionFormatter {
             }
             default -> throw new IllegalArgumentException("Неизвестный формат:" + format);
         }
-        return interpreter.calculateAndFormat(dividend, divisor);
+        return interpreter.divideAndFormat(format, dividend, divisor);
     }
 }

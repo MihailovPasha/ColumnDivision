@@ -2,7 +2,7 @@ package org.example;
 
 public class RussianInterpretationService extends ColumnDivisionService {
 
-    protected String formatOutputBefore(long dividend, long divisor, String quotient) {
+    public String formatOutputBefore(long dividend, long divisor, String quotient) {
         return "";
     }
 
@@ -38,6 +38,6 @@ public class RussianInterpretationService extends ColumnDivisionService {
     }
 
     private static int countDigits(long dividend) {
-        return (int) Math.log10(dividend) + 1;
+        return (int) Math.log10(Math.abs(dividend)) + 1;
     }
 }

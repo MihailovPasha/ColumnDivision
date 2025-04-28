@@ -1,6 +1,8 @@
 package org.example;
 
-import static org.example.ColumnDivisionService.*;
+import static org.example.ColumnDivisionService.remainder;
+import static org.example.ColumnDivisionService.result;
+import static org.example.ColumnDivisionService.quotient;
 
 public class ColumnDivisionCalculator {
 
@@ -28,8 +30,8 @@ public class ColumnDivisionCalculator {
                 remainder.replace(0, remainder.length(), String.valueOf(remaiderNumber));
                 currentNumber = Parser.parse(remainder.toString());
             } else {
-                if (Parser.parse(String.valueOf(remainder)) == 0){
-                    quotient.append(0); // Исправить здесь
+                if (Parser.parse(String.valueOf(remainder)) == 0) {
+                    quotient.append(0);
                 }
             }
             if (i == digits.length - 1) {

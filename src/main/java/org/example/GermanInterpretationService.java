@@ -9,11 +9,11 @@ public class GermanInterpretationService extends ColumnDivisionService {
         return " " + dividend + " : " + divisor + " = " + sign + quotient.replace("-", "") + "\n";
     }
 
-    protected void countTheResultOfColumn(long dividend, long divisor) {
+    public void countTheResultOfColumn(long dividend, long divisor) {
         ColumnDivisionCalculator.countTheResultOfColumn(dividend, divisor);
     }
 
-    protected String formatOutputAfter(long dividend, long divisor) {
+    public String formatOutputAfter(long dividend, long divisor) {
         return "";
     }
 }
