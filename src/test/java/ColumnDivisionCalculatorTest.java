@@ -13,49 +13,49 @@ public class ColumnDivisionCalculatorTest {
 
     @Test
     public void testPositiveNumbers() {
-        ColumnDivisionCalculator.countTheResultOfColumn(78945, 4);
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(78945, 4);
         String expectedQuotient = "19736";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testNegativeDividend() {
-        ColumnDivisionCalculator.countTheResultOfColumn(-900034561, 7);
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(-900034561, 7);
         String expectedQuotient = "-128576365";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testNegativeDivisor() {
-        ColumnDivisionCalculator.countTheResultOfColumn(12345675, -3);
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(12345675, -3);
         String expectedQuotient = "-204115225";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testBothNegative() {
-        ColumnDivisionCalculator.countTheResultOfColumn(-788895441, -9);
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(-788895441, -9);
         String expectedQuotient = "8765549";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testDivisionWithZero() {
-        ColumnDivisionCalculator.countTheResultOfColumn(0, 12342345);
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(0, 12342345);
         String expectedQuotient = "0";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testDivisionOfTheNumberOfItself() {
-        ColumnDivisionCalculator.countTheResultOfColumn(289573463, 289573463);
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(289573463, 289573463);
         String expectedQuotient = "1";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }
 
     @Test
     public void testNumbersWithMoreNulls() {
-        ColumnDivisionCalculator.countTheResultOfColumn(1200000012, 12);
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(1200000012, 12);
         String expectedQuotient = "10000001";
         assertEquals(expectedQuotient, ColumnDivisionService.quotient.toString());
     }

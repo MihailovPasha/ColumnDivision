@@ -6,8 +6,8 @@ public class RussianInterpretationService extends ColumnDivisionService {
         return "";
     }
 
-    public void countTheResultOfColumn(long dividend, long divisor) {
-        ColumnDivisionCalculator.countTheResultOfColumn(dividend, divisor);
+    public void outputTheDivisionColumn(long dividend, long divisor) {
+        ColumnDivisionCalculator.countTheDivisionIntoColumn(dividend, divisor);
     }
 
     public String formatOutputAfter(long dividend, long divisor) {

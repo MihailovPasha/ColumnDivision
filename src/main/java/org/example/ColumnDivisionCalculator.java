@@ -6,7 +6,7 @@ import static org.example.ColumnDivisionService.quotient;
 
 public class ColumnDivisionCalculator {
 
-    public static void countTheResultOfColumn(long dividend, long divisor) {
+    public static void countTheDivisionIntoColumn(long dividend, long divisor) {
         boolean isNegative = (dividend < 0) ^ (divisor < 0);
         dividend = Math.abs(dividend);
         divisor = Math.abs(divisor);

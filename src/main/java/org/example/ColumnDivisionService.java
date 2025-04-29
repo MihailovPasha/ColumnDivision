@@ -6,7 +6,7 @@ public abstract class ColumnDivisionService implements DivisionService {
     public static StringBuilder quotient = new StringBuilder();
 
     public String divideAndFormat(DivisionFormatType format, long dividend, long divisor) {
-        countTheResultOfColumn(dividend, divisor);
+        outputTheDivisionColumn(dividend, divisor);
         String initialFormat = formatOutputBefore(dividend, divisor, quotient.toString());
         String finalFormat = formatOutputAfter(dividend, divisor);
         return initialFormat + result.toString() + finalFormat;
@@ -14,7 +14,7 @@ public abstract class ColumnDivisionService implements DivisionService {
 
     protected abstract String formatOutputBefore(long dividend, long divisor, String quotient);
 
-    protected abstract void countTheResultOfColumn(long dividend, long divisor);
+    protected abstract void outputTheDivisionColumn(long dividend, long divisor);
 
     protected abstract String formatOutputAfter(long dividend, long divisor);
 }
